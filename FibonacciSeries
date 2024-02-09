@@ -1,0 +1,35 @@
+import java.util.Scanner;
+ 
+public class FibonacciSeries {
+ 
+    public static void main(String[] args) {
+        // Declare variables and constants
+        int n=0, firstTerm = 0, secondTerm = 1, nextTerm;
+        
+        // Create a Scanner object
+        Scanner sc = new Scanner(System.in);
+         
+        // Prompt for user to enter number of term(s)
+        System.out.print("Please enter the number of term(s): ");
+      
+        // Read number of term(s) entered by the user
+        n = sc.nextInt();
+        
+        // Display Fibonacci series till number of term(s) 
+        System.out.println("Fibonacci Series till " + n + " term(s): ");
+        
+        // Initialize and evaluate the condition number of term(s)  
+        for(int i = 1; i <= n; i++){
+            
+            // Execute the statement
+            System.out.print(firstTerm + ", ");
+            
+            // Read and assigning firstTerm, secTerm and lastTerm to create a fibonacci series
+            nextTerm = firstTerm + secondTerm;
+            firstTerm = secondTerm;
+            secondTerm = nextTerm;
+          
+        } 
+    }
+     
+}
